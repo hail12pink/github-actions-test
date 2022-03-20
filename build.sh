@@ -1,10 +1,10 @@
 chmod +x build.lua
+> build.lua #clear build.lua
 
 for FILE in modules/*; do
 	echo $FILE;
 	chmod +x $FILE
-	CONTENTS=`$(<FILE)`
-	> build.lua
+	CONTENTS=`cat $FILE`
 	echo $CONTENTS >> build.lua -- imported from ../$FILE
 done
 
