@@ -1,7 +1,5 @@
 ls
-ls ..
-ls ../..
-ls ../../..
+
 
 chmod +x ../build.lua
 
