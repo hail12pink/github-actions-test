@@ -1,3 +1,8 @@
+ls
+ls ..
+ls ../..
+ls ../../..
+
 chmod +x ../build.lua
 
 for FILE in ../modules/*; do
