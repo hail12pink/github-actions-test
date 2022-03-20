@@ -9,4 +9,4 @@ for FILE in modules/*; do
 done
 
 
-echo `cat ../main.lua` >> build.lua
+echo `cat /main.lua` >> build.lua
