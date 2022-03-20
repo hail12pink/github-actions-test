@@ -34,3 +34,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run the build script
         run: ./build.sh
+        
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+         github_token: ${{secrets.GITHUB_TOKEN}}
+         branch: ${{github.ref}}
