@@ -4,8 +4,7 @@ chmod +x build.lua
 for FILE in modules/*; do
 	echo $FILE;
 	chmod +x $FILE
-	CONTENTS=`$(<FILE)`
-	echo "$CONTENTS" >> build.lua -- imported from ../$FILE
+	echo "$(<FILE)" >> build.lua -- imported from ../$FILE
 done
 
 echo "$(<main.lua)" >> build.lua
