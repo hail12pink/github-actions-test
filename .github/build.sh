@@ -9,4 +9,7 @@ for FILE in modules/*; do
 done
 
 
-echo `cat /main.lua` >> build.lua
+echo `cat main.lua` >> build.lua
+
+git commit -a -m "compiled build.lua"
+git push origin main
