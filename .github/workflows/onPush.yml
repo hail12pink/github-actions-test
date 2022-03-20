@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: run this thing
-        run: chmod=+x ./.github/build.sh
+        run: sudo chmod=+x ./.github/build.sh
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
