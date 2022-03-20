@@ -35,6 +35,10 @@ jobs:
       - name: Run the build script
         run: ./build.sh
         
+      # Check for syntax errors
+      - name: Syntax check
+        run: ./syntaxChecker.sh
+        
       # Push changes to the edited branch
       - name: Push changes to the ${{github.ref}} branch
         uses: ad-m/github-push-action@master
