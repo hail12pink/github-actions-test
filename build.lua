@@ -78,7 +78,7 @@ function Signal:Destroy()
 		connection:Disconnect()
 	end
 end -- imported from ../modules/signal.lua
-[module.print()
+module.print()
 
 local onThreeSecondsWaited = Signal.new() -- creates the signal and gives it an appropriate variable name for the situation we'll use it for
 
