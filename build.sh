@@ -5,10 +5,10 @@ for FILE in modules/*; do
 	echo $FILE;
 	chmod +x $FILE
 	CONTENTS=`$(<FILE)`
-	$CONTENTS >> build.lua -- imported from ../$FILE
+	echo "$CONTENTS" >> build.lua -- imported from ../$FILE
 done
 
-`$(<main.lua)` >> build.lua
+echo "$(<main.lua)" >> build.lua
 
 git init
 git config --global user.name "robot"
