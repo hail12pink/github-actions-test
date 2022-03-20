@@ -4,12 +4,11 @@ chmod +x build.lua
 for FILE in modules/*; do
 	echo $FILE;
 	chmod +x $FILE
-	CONTENTS=`cat $FILE`
+	CONTENTS=`$(<FILE)`
 	$CONTENTS >> build.lua -- imported from ../$FILE
 done
 
-
-cat main.lua` >> build.lua
+`$(<main.lua)` >> build.lua
 
 git init
 git config --global user.name "robot"
