@@ -1,3 +1,5 @@
+chmod +x ../build.lua
+
 for FILE in ../modules/*; do
 	echo $FILE;
 	chmod +x $FILE
