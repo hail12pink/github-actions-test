@@ -33,4 +33,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run the build script
-        run: ./.github/build.sh
+        run: ./build.sh
