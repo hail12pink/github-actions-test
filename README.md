@@ -2,14 +2,15 @@
 
 ## how do it work!?
 
-you put da modules in [/modules](https://github.com/hail12pink/github-actions-test/tree/main/modules)
-
-then da workflow in [/.github/workflows/onPush.yml](https://github.com/hail12pink/github-actions-test/blob/main/.github/workflows/onPush.yml) runs da crazy [/build.sh](https://github.com/hail12pink/github-actions-test/blob/main/build.sh)
+the workflow ([/.github/workflows/onPush.yml](https://github.com/hail12pink/waste-of-space-autobuild/blob/main/.github/workflows/onPush.yml) runs the [/build.sh](https://github.com/hail12pink/waste-of-space-autobuild/blob/main/build.sh)) whenever a push is made to the repository.
 
 
-the crazy build.sh shell script puts all the code from other modules into da epic [/build.lua](https://github.com/hail12pink/github-actions-test/blob/main/build.lua)
+the build.sh script will first add all of the [modules](https://github.com/hail12pink/waste-of-space-autobuild/tree/main/modules) to a file called [/build.lua](https://github.com/hail12pink/waste-of-space-autobuild/blob/main/build.lua)
 
-and then puts [/main.lua](https://github.com/hail12pink/github-actions-test/blob/main/main.lua) at the end of [/build.lua](https://github.com/hail12pink/github-actions-test/blob/main/build.lua)!!!
+next, the build.sh script places the code from [/main.lua](https://github.com/hail12pink/waste-of-space-autobuild/blob/main/main.lua) at the end of build.lua
 
-the end!
+after build.sh is done, the workflow will run the the [/syntaxChecker.sh](https://github.com/hail12pink/waste-of-space-autobuild/blob/main/syntaxChecker.sh) shell script.
 
+this script will run /luau/luau-analyze, and if it sees any syntax errors it will error and stop the workflow. this is to ensure no files built with syntax errors are pushed to the repository
+
+if there are no syntax errors, then build.lua will be push! yay!
