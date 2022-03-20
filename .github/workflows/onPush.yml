@@ -4,9 +4,12 @@ name: CI
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
+  # Triggers the workflow on push events for all branches
   push:
-    branches: [ main ]
+    branches:
+      - '**'
+    paths-ignore:
+      - '**/README.md'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -27,15 +30,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
-      #- name: chmod
-      #  run: sudo chmod=+x ./.github/build.sh
 
-      # Runs a single command using the runners shell
+      # Build the .lua file
       - name: Run the build script
         run: ./build.sh
         
-      - name: Push changes
+      # Push changes to the edited branch
+      - name: Push changes to the ${{github.ref}} branch
         uses: ad-m/github-push-action@master
         with:
          github_token: ${{secrets.GITHUB_TOKEN}}
