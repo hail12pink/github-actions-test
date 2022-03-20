@@ -1,4 +1,3 @@
--- ignore this class and dont use it, its made for use within the Signal class. dont forget to copy this too though!
 local SignalConnection = {}
 SignalConnection.ClassName = "SignalConnection"
 SignalConnection.__index = SignalConnection
@@ -17,7 +16,6 @@ function SignalConnection:Disconnect()
 	end
 end
 
--- beginning of the Signal class itself
 local Signal = {}
 Signal.ClassName = "Signal"
 Signal.__index = Signal
