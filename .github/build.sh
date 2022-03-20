@@ -1,3 +1,10 @@
-echo ran
+for FILE in ../modules/*; do
+	echo $FILE;
+	chmod +x $FILE
+	CONTENTS=`cat $FILE`
+	> ../build.lua
+	echo $CONTENTS >> ../build.lua -- imported from ../$FILE
+done
 
-for FILE in *; do echo $FILE; done
+
+echo `cat ../main.lua` >> ../build.lua
