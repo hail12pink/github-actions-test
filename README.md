@@ -2,7 +2,7 @@
 
 ## how do it work!?
 
-the workflow ([/.github/workflows/onPush.yml](https://github.com/hail12pink/waste-of-space-autobuild/blob/main/.github/workflows/onPush.yml) runs the [/build.sh](https://github.com/hail12pink/waste-of-space-autobuild/blob/main/build.sh)) whenever a push is made to the repository.
+the workflow ([/.github/workflows/onPush.yml](https://github.com/hail12pink/waste-of-space-autobuild/blob/main/.github/workflows/onPush.yml)) runs the [/build.sh](https://github.com/hail12pink/waste-of-space-autobuild/blob/main/build.sh) shell script whenever a push is made to the repository.
 
 
 the build.sh script will first add all of the [modules](https://github.com/hail12pink/waste-of-space-autobuild/tree/main/modules) to a file called [/build.lua](https://github.com/hail12pink/waste-of-space-autobuild/blob/main/build.lua)
