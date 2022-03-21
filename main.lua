@@ -1,5 +1,7 @@
 module.print()
 
+module.randomError()
+
 local onThreeSecondsWaited = Signal.new() -- creates the signal and gives it an appropriate variable name for the situation we'll use it for
 
 --[[
